@@ -7,7 +7,7 @@ const Hero = () => {
           <div className="max-w-lg">
             <h1 className="text-5xl font-bold">
               Welcome to{" "}
-              <span className="text-5xl font-bold bg-gradient-to-r from-primary via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient">
+              <span className="text-5xl font-bold bg-300% bg-gradient-to-r from-primary via-blue-500 to-secondary text-transparent bg-clip-text animate-gradient">
                 ByteBlaze
               </span>
             </h1>
