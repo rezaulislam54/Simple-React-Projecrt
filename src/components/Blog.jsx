@@ -1,12 +1,12 @@
-import { Link, useNavigation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import image from "../assets/error.jpg";
+import { AiFillDelete } from "react-icons/ai";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, delatable, handleDelete }) => {
   const { id, title, description, cover_image, published_at } = blog;
 
-  const navigation = useNavigation();
-  if (navigation === "liadid")
-    return (
+  return (
+    <div className="relative">
       <div className="border-2 border-opacity-45 border-green-700 hover:border-blue-700 shadow-lg rounded-lg p-4 hover:scale-105 duration-300 ">
         <Link
           to={`/blogs/${id}`}
@@ -25,7 +25,16 @@ const Blog = ({ blog }) => {
           </div>
         </Link>
       </div>
-    );
+      {delatable && (
+        <div
+          onClick={() => handleDelete(id)}
+          className="absolute -top-5 -right-5 text-2xl hover:bg-opacity-70 hover:scale-105 bg-[#C9B3FF] p-3 rounded-full"
+        >
+          <AiFillDelete></AiFillDelete>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Blog;

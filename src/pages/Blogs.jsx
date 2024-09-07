@@ -1,9 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import Blog from "../components/Blog";
+import Spinar from "../components/Spinar";
 
 const Blogs = () => {
   const blogs = useLoaderData();
-
+  const navigation = useNavigation();
+  if (navigation.state === "loading") return <Spinar />;
   return (
     <section className="text-black my-5">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">

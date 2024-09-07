@@ -1,17 +1,23 @@
 import { useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { MdBookmarkAdd } from "react-icons/md";
+import { saveCart } from "../utilites";
 
 const BlogCart = () => {
-  const blogdetail = useLoaderData();
+  const posts = useLoaderData();
   const {
     title,
     reading_time_minutes,
     comments_count,
     published_at,
     public_reactions_count,
-  } = blogdetail;
+  } = posts;
 
   const [index, setindex] = useState(0);
+
+  const handleAddBookmark = (blog) => {
+    saveCart(blog);
+  };
 
   return (
     <div className="max-w-2xl px-6 py-16 mx-auto space-y-12">
@@ -79,6 +85,13 @@ const BlogCart = () => {
           </svg>
           <span>Author</span>
         </Link>
+
+        <div
+          onClick={() => handleAddBookmark(posts)}
+          className="text-xl ml-5 hover:scale-105 bg-[#C9B3FF] p-3 rounded-full"
+        >
+          <MdBookmarkAdd></MdBookmarkAdd>
+        </div>
       </div>
 
       <Outlet></Outlet>
