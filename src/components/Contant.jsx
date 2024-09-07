@@ -8,7 +8,7 @@ const Contant = () => {
   const { id, cover_image, body_html, tags, title } = blog;
 
   return (
-    <div className=" border-opacity-25 border-2 shadow-lg rounded-lg p-2">
+    <div className="overflow-hidden border-opacity-25 border-2 shadow-lg rounded-lg p-2">
       <div className="mx-auto group hover:no-underline focus:no-underline ">
         <img
           className="object-cover w-full rounded h-44 "
