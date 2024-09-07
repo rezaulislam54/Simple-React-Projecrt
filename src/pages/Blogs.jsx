@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigation } from "react-router-dom";
+import { Link, useLoaderData, useNavigation } from "react-router-dom";
 import Blog from "../components/Blog";
 import Spinar from "../components/Spinar";
 
@@ -9,9 +9,8 @@ const Blogs = () => {
   return (
     <section className="text-black my-5">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-        <a
-          rel="noopener noreferrer"
-          href="#"
+        <Link
+          to={`/blogs/${blogs[0].id}`}
           className="block max-w-sm gap-3 mx-auto sm:max-w-full lg:grid lg:grid-cols-12 "
         >
           <img
@@ -26,7 +25,7 @@ const Blogs = () => {
             <span className="text-xs text-gray-400">February 19, 2021</span>
             <p>{blogs[0].description}</p>
           </div>
-        </a>
+        </Link>
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {blogs.slice(1, 25).map((blog) => (
             <Blog key={blog.id} blog={blog}></Blog>

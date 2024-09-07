@@ -18,7 +18,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 shadow-lg fixed h-16 z-30">
+    <div className="navbar bg-base-100 shadow-lg h-16 ">
       <div className="flex-1">
         <Link to={"/"} className="btn btn-ghost text-2xl gap-0 text-secondary">
           Byte <span className="text-primary">Blaze</span>

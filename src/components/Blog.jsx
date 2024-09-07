@@ -7,7 +7,7 @@ const Blog = ({ blog, delatable, handleDelete }) => {
 
   return (
     <div className="relative">
-      <div className="border-2 border-opacity-45 border-green-700 hover:border-blue-700 shadow-lg rounded-lg p-4 hover:scale-105 duration-300 ">
+      <div className="border-2 border-opacity-45 h-[500px] border-green-700 hover:border-blue-700 shadow-lg rounded-lg p-4 hover:scale-105 duration-300 ">
         <Link
           to={`/blogs/${id}`}
           className="max-w-sm mx-auto group hover:no-underline focus:no-underline "
