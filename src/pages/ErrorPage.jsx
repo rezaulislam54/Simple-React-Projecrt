@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet";
 import { Link, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
   const error = useRouteError();
   return (
     <div className="flex flex-col w-full h-screen justify-center items-center">
+      <Helmet>
+        <title> Byte Blaze | Error Page</title>
+      </Helmet>
       <img
         src="https://res.cloudinary.com/dvp64j4a3/image/upload/v1725709532/conceptrezaul_bbsqhm.jpg"
         alt=""

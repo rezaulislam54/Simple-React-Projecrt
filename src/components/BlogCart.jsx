@@ -23,7 +23,7 @@ const BlogCart = () => {
     <div className="max-w-2xl px-6 py-16 mx-auto space-y-12">
       <article className="space-y-8  text-black">
         <div className="space-y-6">
-          <h1 className="text-4xl font-bold md:tracking-tight md:text-5xl">
+          <h1 className="text-4xl  font-bold md:tracking-tight md:text-5xl">
             {title}
           </h1>
           <div className="flex flex-col items-start justify-between w-full md:flex-row md:items-center text-gray-800 font-medium">

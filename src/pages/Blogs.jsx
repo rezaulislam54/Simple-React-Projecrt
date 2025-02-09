@@ -1,6 +1,7 @@
 import { Link, useLoaderData, useNavigation } from "react-router-dom";
 import Blog from "../components/Blog";
 import Spinar from "../components/Spinar";
+import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   const blogs = useLoaderData();
@@ -8,6 +9,9 @@ const Blogs = () => {
   if (navigation.state === "loading") return <Spinar />;
   return (
     <section className="text-black my-5">
+      <Helmet>
+        <title> Byte Blaze | Blogs</title>
+      </Helmet>
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <Link
           to={`/blogs/${blogs[0].id}`}
